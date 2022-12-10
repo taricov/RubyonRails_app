@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RbApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class="w-screen h-screen">
+      <div class=" mx-auto flex flex-col justify-between h-screen">
+  <%= render partial: "shared/navbar" %>
+  <div class="w-11/12 bg-slate-200 mx-auto">
+    <%= yield %>
+    </div>
+    <%= render partial: "shared/footer" %>
+    </div>
+    </div>
+
+  </body>
+</html>
